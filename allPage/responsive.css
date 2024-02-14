@@ -1,0 +1,157 @@
+@media screen and (max-width: 368px) {
+  .bar-nav {
+    display: flex;
+  }
+
+  .logo-nav {
+    font-size: .8em;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    background: rgba(225,225,225,.5);
+    position: fixed;
+    top: -200%;
+    right: 0;
+    height: 50vh;
+    gap: 0;
+  }
+
+  .act-link {
+    display: flex;
+    position: fixed;
+    top: 10%;
+    right: 0;
+  }
+  .link-item {
+    font-size: .7em;
+    margin-right: 50%;
+  }
+}
+
+@media screen and (min-width: 368px) {
+  .bar-nav {
+    display: flex;
+  }
+
+  .logo-nav {
+    font-size: .8em;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    height: 35vh;
+    background: rgba(225,225,225,.5);
+    position: fixed;
+    top: -200%;
+    right: 0;
+    gap: 5px;
+  }
+
+  .act-link {
+    display: flex;
+    position: fixed;
+    top: 6%;
+    right: 0;
+  }
+  .link-item {
+    margin-right: 50%;
+  }
+}
+
+@media screen and (min-width: 568px) {
+  .bar-nav {
+    display: flex;
+  }
+
+  .logo-nav {
+    font-size: .8em;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    background: rgba(225,225,225,.5);
+    flex-direction: column;
+    position: fixed;
+    top: -200%;
+    right: 0;
+    gap: 5px;
+  }
+
+  .act-link {
+    display: flex;
+    position: fixed;
+    top: 7%;
+    right: 0;
+  }
+  .link-item {
+    margin-right: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .bar-nav {
+    display: none;
+  }
+
+  .logo-nav {
+    font-size: 1.2em;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    right: 0;
+    gap: 0;
+    width: auto;
+    height: 50px;
+    margin-left: 40%;
+    font-size: .65em;
+    z-index: 99999;
+  }
+ .link-item {
+   margin-right: 0;
+ }
+}
+
+@media screen and (min-width: 1024px) {
+  .bar-nav {
+    display: none;
+  }
+
+  .logo-nav {
+    font-size: 1.2em;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    right: 0;
+    gap: 0;
+    width: auto;
+    height: 50px;
+    margin-left: 45%;
+    font-size: .65em;
+    z-index: 99999;
+  }
+ .link-item {
+   margin-right: 0;
+ }
+}

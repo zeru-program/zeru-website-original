@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zeru page</title>
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="responsive.css" type="text/css" media="all" />
+      <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link rel="stylesheet" href="https://unpkg.com/transition-style" />
+</head>
+<body>
+  <!-- =============== Header & Navbar ================ -->
+  <header>
+    <nav>
+      <div class="con-nav">
+        <label class="logo-nav"><a href="#">Zerr.</a></label>
+        <img class="bar-nav" onclick="changeImgNav()" src="menu.png" alt="nav menu" />
+      </div>
+      <div class="nav-links">
+
+        <label id="toHome" class="link-item active">Home</label>
+        <label id="toAbout" class="link-item">About us</label>
+        <label id="toSkils" class="link-item">Skils</label>
+        <label id="toPortofolio" class="link-item">Portofolio</label>
+        <label id="toContact" class="link-item">Contact</label>
+
+      </div>
+    </nav>
+  </header>
+  <!-- ============= main content ============== -->
+  <main>
+    <div class="container" id="home">
+      <div class="animateWipe" transition-style="out:circle:top-left"></div>
+      <img src="logo.png" class="logo-home-isi" alt="logo" />
+      <label class="title" id="homeTitle">Welcome !</label>
+      <label class="sub-title" id="homeSubtitle">
+        <font class="hi-title">Hi I'm Justine</font> !<br> Web developer || Frond end engineer || Grapihic designer
+      </label>
+      <button class="btn-talk" onclick="talk()">Let's Talk</button>
+    </div>
+    <div class="container" id="about">
+      <label class="title translateAbout" id="aboutTitle">About zeru</label>
+      <label class="sub-title translateAbout" id="aboutSubtitle">
+      I am Justine, the student who created this Zeru website. This website was created or worked on in January 2024 and released in February 2024. With my sufficient skills, I created parallax effects on my website. Also prioritize the existing user interface and user experience. I am adequate in the field of front-end web developer. By moving towards the field of full-stack developer, I am now studying backend web development. Now I will be 15 years old in 2024 and studying at SMPN 10 BOGOR, WEST JAVA. Apart from creating websites, I also have creative skills in making films, existing photos and designs, as well as video editing. Thinking creatively and with high integrity is the my vision.
+        </label>
+    </div>
+    <div class="container" id="skils">
+      <label class="title" id="skilTitle">What are my skills?</label>
+      <label class="sub-title"></label>
+    </div>
+    <div class="container" id="portofolio">
+      <label class="title">Welcome !</label>
+      <label class="sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla aliquam quos quibusdam,
+        tenetur quas, id beatae nesciunt, suscipit facere quidem ipsum libero aut veniam eum. Incidunt quos, est ad
+        repudiandae.</label>
+    </div>
+    <div class="container" id="contact">
+      <label class="title">Welcome !</label>
+      <label class="sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla aliquam quos quibusdam,
+        tenetur quas, id beatae nesciunt, suscipit facere quidem ipsum libero aut veniam eum. Incidunt quos, est ad
+        repudiandae.</label>
+    </div>
+    <footer>
+      <p>Hello world</p>
+    </footer>
+  </main>
+
+  <script src="script.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>
