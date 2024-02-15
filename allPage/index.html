@@ -1,76 +1,279 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Zeru page</title>
+        <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+        <link
+            rel="stylesheet"
+            href="responsive.css"
+            type="text/css"
+            media="all"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+        <link rel="stylesheet" href="https://unpkg.com/transition-style" />
+    </head>
+    <body>
+        <!-- =============== Header & Navbar ================ -->
+        <header>
+            <nav>
+                <div class="con-nav">
+                    <label class="logo-nav"><a href="#">Zerr.</a></label>
+                    <img
+                        class="bar-nav"
+                        onclick="changeImgNav()"
+                        src="menu.png"
+                        alt="nav menu"
+                    />
+                </div>
+                <div class="nav-links">
+                    <label id="toHome" class="link-item active">Home</label>
+                    <label id="toAbout" class="link-item">About us</label>
+                    <label id="toSkils" class="link-item">Skils</label>
+                    <label id="toPortofolio" class="link-item"
+                        >Portofolio</label
+                    >
+                    <label id="toContact" class="link-item">Contact</label>
+                </div>
+            </nav>
+        </header>
+        <!-- ============= main content ============== -->
+        <main>
+            <div class="container" id="home">
+                <div
+                    class="animateWipe"
+                    transition-style="out:circle:top-right"
+                ></div>
+                <img src="welcome.svg" class="logo-home-isi" alt="logo" />
+                <label class="title" id="homeTitle">Welcome !</label>
+                <label class="sub-title" id="homeSubtitle">
+                    <font class="hi-title">Hi I'm Justine</font> !<br />
+                    Web developer || Frond end engineer || Grapihic designer
+                </label>
+                <button class="btn-talk" onclick="talk()">Let's Talk</button>
+                <div class="con-img-talk">
+                    <img
+                        src="whatsapp.png"
+                        onclick="window.location.href = 'https://example.com'"
+                        class="img-talk-social"
+                        alt=""
+                    />
+                    <img src="instagram.png" class="img-talk-social" alt="" />
+                    <img src="gmail.png" class="img-talk-social" alt="" />
+                </div>
+            </div>
+            <div class="container" id="about">
+                <label class="title translateAbout" id="aboutTitle"
+                    >About zeru</label
+                >
+                <label class="sub-title translateAbout" id="aboutSubtitle">
+                    I am Justine, the student who created this Zeru website.
+                    This website was created or worked on in January 2024 and
+                    released in February 2024. With my sufficient skills, I
+                    created parallax effects on my website. Also prioritize the
+                    existing user interface and user experience. I am adequate
+                    in the field of front-end web developer. By moving towards
+                    the field of full-stack developer, I am now studying backend
+                    web development. Now I will be 15 years old in 2024 and
+                    studying at SMPN 10 BOGOR, WEST JAVA. Apart from creating
+                    websites, I also have creative skills in making films,
+                    existing photos and designs, as well as video editing.
+                    Thinking creatively and with high integrity is the my
+                    vision.
+                </label>
+            </div>
+            <div class="container" id="skils">
+                <label class="title" id="skilTitle">What are my skills?</label>
+                <label class="sub-title">my skills that I currently have</label>
+                <!-- box -->
+                <div class="con-box-skil">
+                    <div class="box">
+                        <img src="html.png" class="img-skil" alt="" />
+                        <p class="desk-skil">
+                            Saya sudah mahir dalam HTML5 baik itu pembuatan navbar, form, tabel, dan lainnya. Hampir seluruh projek saya dibuat dengan HTML5.
+                        </p>
+                    </div>
+                    <div class="box">
+                        <img src="css.png" class="img-skil" alt="" />
+                        <p class="desk-skil">
+                            Saya mahir dalam mendesign website yang responsive dan tentu saja modern. Dengan mempunyai pengalaman memakai framework css lainnya seperti bootstrap, tallwind.
+                        </p>
+                    </div>
+                    <div class="box">
+                        <img src="js.png" class="img-skil" alt="" />
+                        <p class="desk-skil">
+                          Saya memiliki keterampilan dalam mendesign logika untuk website saya. Dan juga memiliki ide kreatif dalam menyelesaikan bug. Saat ini saya sedang mempelajari framework javascript, yaitu react js.
+                        </p>
+                    </div>
+                    <div class="box">
+                        <img src="gnu-bash.png" class="img-skil" alt="" />
+                        <p class="desk-skil">
+                          Saya memiliki keterampilan yang cukup baik dalam mendesain dan membuat aplikasi dalam script "sh" , tetapi saya masih menyentuh teori dasarnya saja, dengan menjalankannya di termux.
+                        </p>
+                    </div>
+                    <div class="box">
+                        <img src="php.png" class="img-skil" alt="" />
+                        <p class="desk-skil">
+                          Saya memiliki keterampilan dalam mengatur logika pengiriman data dari halaman php ke halaman php lain memakai metod post dan get, tetapi itu hanya dasar yang saya ketahui, untuk lainnya saya lebih memahami html dalam penggunaan php nya.
+                        </p>
+                    </div>
+                    <div class="box">
+                        <img src="git.png" class="img-skil" alt="" />
+                        <p class="desk-skil">
+                          Saya memiliki keterampilan dalam menyelesaikan dan menjalankan program git ini baik di termux (android) maupun windows. Dengan branch yang saya tahu, seperti push, clone, commit message, dan lainnya.
+                        </p>
+                    </div>
+                    <div class="box">
+                        <img src="github.png" class="img-skil" alt="" />
+                        <p class="desk-skil">
+                          Mahir dalam menyusun file ke hosting github merupakan keterampilan saya. dengan memahami commit yang ada di github juga merupakan skil saya.
+                        </p>
+                    </div>
+                    <div class="box">
+                        <img src="gitlab.png" class="img-skil" alt="" />
+                        <p class="desk-skil">
+                          Belajar hosting offline selain github merupakan pilihan saya supaya saya memiliki pengetahuan yang memadai. Skill gitlab saya setara dengan skill github saya.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="portofolio">
+                <div id="slider-container">
+                    <div id="slider" class="bxsh">
+                        <div class="slide opacityOn" id="imgp1">
+                            <img
+                                src="test.jpg"
+                                class="img-porto"
+                                alt="Slide 1"
+                            />
+                        </div>
+                        <div class="slide" id="imgp2">
+                            <img
+                                src="test2.jpg"
+                                class="img-porto"
+                                alt="Slide 2"
+                            />
+                        </div>
+                        <div class="slide" id="imgp3">
+                            <img
+                                src="test.jpg"
+                                class="img-porto"
+                                alt="Slide 3"
+                            />
+                        </div>
+                    </div>
+                <div class="decoration-block topDec"></div>
+                <div class="decoration-block bottomDec"></div>
+                </div>
+                <div class="slide-check">
+                  <div class="check-radio on" id="r1"></div>
+                  <div class="check-radio" id="r2"></div>
+                  <div class="check-radio" id="r3"></div>
+                </div>
+                
+                <!-- projek -->
+            </div>
+            <div class="container" id="project">
+              
+            </div>
+            <div class="container" id="contact">
+              <div class="contact-information">
+                <label class="title tContact">Follow us</label>
+                <br>
+                <div class="isi-info-contact">
+                  <div class="c1-contact">
+                  <img src="whatsapp.png" class="img-talk-social" alt="" />
+                    <label><a href="https://wa.me/6289526333265" class="href-contact">+6289526333265</a></label>
+                  </div>
+                  <div class="c1-contact">
+                  <img src="instagram.png" class="img-talk-social" alt="" />
+                    <label><a href="https://www.instagram.com/zerr.ace?r" class="href-contact">@zerr.ace</a></label>
+                  </div>
+                  <div class="c1-contact">
+                  <img src="gmail.png" class="img-talk-social" alt="" />
+                    <label><a href="mailto:zeruprogram@gmail.com?subject=HireYou" class="href-contact">zeruprogram@gmail.com</a></label>
+                  </div>
+                  <div class="c1-contact">
+                  <img src="location.png" class="img-talk-social" alt="" />
+                    <label><a href="https://maps.app.goo.gl/DFANiWSdinNK3yhB7" class="href-contact address">   Cipaku, bogor selatan Jawa barat, Indonesia.</a></label>
+                  </div>
+                </div>
+              </div>
+              <div class="contact-form">
+                <label class="title tContact">Contact us</label>
+              <form action="https://sheetdb.io/api/v1/5evyv444o1ogn" method="POST" class="form">
+                <div class="con-input">
+                  <label class="name-input">Nama lengkap</label>
+                  <input type="text" name="nama" class="input-form" id="nama" oninput="cekDisabledBtn()" placeholder="type in here.." required />
+                </div>
+                <div class="con-input">
+                  <label class="name-input">Email</label>
+                  <input type="email" name="email_user" class="input-form" id="email" oninput="cekDisabledBtn()" placeholder="type in here.." required />
+                </div>
+                <div class="con-input">
+                  <label class="name-input">Subjek</label>
+                  <input type="text" name="judul" class="input-form" id="subjek" oninput="cekDisabledBtn()" placeholder="type in here.." required />
+                </div>
+                <div class="con-input">
+                  <label class="name-input">Isi subjek</label>
+                  <textarea name="isi_subjek" class="input-form textarea-form" id="isiSubjek" oninput="cekDisabledBtn()" placeholder="type in here.." required rows="8" cols="40"></textarea>
+                </div>
+                <button class="submit-form" type="button" onclick="submitForm()" disabled>Kirim</button>
+              </form>
+              </div>
+            </div>
+            <footer>
+              <div class="container-footer">
+                <label class="logo-footer">Zerr.</label>
+                <div class="isi-f">
+                <label class="title-footer">Information web zeru</label>
+                <p class="sub-footer">Created by zeru</p>
+                <p class="sub-footer">programming language HTML5,CSS,JS</p>
+                <p class="sub-footer">library form html SHEETDB</p>
+                <p class="sub-footer">library css ANIMATE.CSS,TRANSITION.CSS</p>
+                <p class="sub-footer">hosting netlify and github</p>
+                <p class="sub-footer">created in 17 febuary 2024</p>
+                </div>
+                <div class="isi-f">
+                <label class="title-footer">Services</label>
+                <p class="sub-footer">web development</p>
+                <p class="sub-footer">web design</p>
+                <p class="sub-footer">front-end support</p>
+                <p class="sub-footer">back-end junior support</p>
+                <p class="sub-footer">designer</p>
+                <p class="sub-footer">cinematography</p>
+                </div>
+                <div class="isi-f">
+                <label class="title-footer">Activity</label>
+                <p class="sub-footer">study in smpn school</p>
+                <p class="sub-footer">study web pgm otodidak</p>
+                <p class="sub-footer">creating website interactive</p>
+                <p class="sub-footer">church service</p>
+                <p class="sub-footer">photography</p>
+                </div>
+                <div class="isi-f">
+                <label class="title-footer">Social media zeru</label>
+                <p class="sub-footer"><a href="https://wa.me/6289526333265">WhatsApp</a></p>
+                <p class="sub-footer"><a href="https://www.instagram.com/zerr.ace?r">Instagram</a></p>
+                <p class="sub-footer"><a href="mailto:zeruprogram@gmail.com?subject=HireYou">Email</a></p>
+                </div>
+              </div>
+              <label class="copyright">copyright ©2024 all rights reserved. by zeru</label>
+            </footer>
+        </main>
 
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zeru page</title>
-  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="responsive.css" type="text/css" media="all" />
-      <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-  <link rel="stylesheet" href="https://unpkg.com/transition-style" />
-</head>
-<body>
-  <!-- =============== Header & Navbar ================ -->
-  <header>
-    <nav>
-      <div class="con-nav">
-        <label class="logo-nav"><a href="#">Zerr.</a></label>
-        <img class="bar-nav" onclick="changeImgNav()" src="menu.png" alt="nav menu" />
+
+
+      <!-- pop up -->
+      <div class="con-popup-succes">
+        <div class="isi-popup-succ">
+          <p class="succes-title">Successful sending!</p>
+        </div>
       </div>
-      <div class="nav-links">
-
-        <label id="toHome" class="link-item active">Home</label>
-        <label id="toAbout" class="link-item">About us</label>
-        <label id="toSkils" class="link-item">Skils</label>
-        <label id="toPortofolio" class="link-item">Portofolio</label>
-        <label id="toContact" class="link-item">Contact</label>
-
-      </div>
-    </nav>
-  </header>
-  <!-- ============= main content ============== -->
-  <main>
-    <div class="container" id="home">
-      <div class="animateWipe" transition-style="out:circle:top-left"></div>
-      <img src="logo.png" class="logo-home-isi" alt="logo" />
-      <label class="title" id="homeTitle">Welcome !</label>
-      <label class="sub-title" id="homeSubtitle">
-        <font class="hi-title">Hi I'm Justine</font> !<br> Web developer || Frond end engineer || Grapihic designer
-      </label>
-      <button class="btn-talk" onclick="talk()">Let's Talk</button>
-    </div>
-    <div class="container" id="about">
-      <label class="title translateAbout" id="aboutTitle">About zeru</label>
-      <label class="sub-title translateAbout" id="aboutSubtitle">
-      I am Justine, the student who created this Zeru website. This website was created or worked on in January 2024 and released in February 2024. With my sufficient skills, I created parallax effects on my website. Also prioritize the existing user interface and user experience. I am adequate in the field of front-end web developer. By moving towards the field of full-stack developer, I am now studying backend web development. Now I will be 15 years old in 2024 and studying at SMPN 10 BOGOR, WEST JAVA. Apart from creating websites, I also have creative skills in making films, existing photos and designs, as well as video editing. Thinking creatively and with high integrity is the my vision.
-        </label>
-    </div>
-    <div class="container" id="skils">
-      <label class="title" id="skilTitle">What are my skills?</label>
-      <label class="sub-title"></label>
-    </div>
-    <div class="container" id="portofolio">
-      <label class="title">Welcome !</label>
-      <label class="sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla aliquam quos quibusdam,
-        tenetur quas, id beatae nesciunt, suscipit facere quidem ipsum libero aut veniam eum. Incidunt quos, est ad
-        repudiandae.</label>
-    </div>
-    <div class="container" id="contact">
-      <label class="title">Welcome !</label>
-      <label class="sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla aliquam quos quibusdam,
-        tenetur quas, id beatae nesciunt, suscipit facere quidem ipsum libero aut veniam eum. Incidunt quos, est ad
-        repudiandae.</label>
-    </div>
-    <footer>
-      <p>Hello world</p>
-    </footer>
-  </main>
-
-  <script src="script.js" type="text/javascript" charset="utf-8"></script>
-</body>
-
+        <script src="script.js" type="text/javascript" charset="utf-8"></script>
+    </body>
 </html>

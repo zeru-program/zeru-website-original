@@ -82,6 +82,16 @@ document.addEventListener('keydown', function (e) {
     navLinks.classList.remove("act-link");
   }
 });
+const containers = document.querySelectorAll('.container');
+containers.forEach(con => {
+con.addEventListener("click", () => {
+    const navLinks = document.querySelector(".nav-links");
+    const getNavOn = document.querySelector(".bar-nav");
+    getNavOn.src = "menu.png";
+    navLinks.classList.remove("act-link");
+  
+});
+})
 
 // system scrolling 
 var logo = document.querySelector('.logo-home-isi');
@@ -92,7 +102,9 @@ var aboutTitle = document.getElementById('aboutTitle');
 var aboutSubtitle = document.getElementById('aboutSubtitle');
 var skilsContainer = document.getElementById('skils');
 var skilTitle = document.getElementById('skilTitle');
+var skilBoxs = document.querySelectorAll(".box");
 var btnTalk = document.querySelector('.btn-talk');
+var conImgTalk = document.querySelector('.con-img-talk');
 var lastScrollTop = 0;
 var isLogoTranslated = false;
 
@@ -101,6 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
     title.style.animation = 'traslRight 1s ease';
     subtitle.style.animation = 'traslRight 2s ease';
     btnTalk.style.animation = 'traslRight 2.5s ease';
+    conImgTalk.style.animation = 'traslRight 3s ease';
 })
 
 window.addEventListener('scroll', function() {
@@ -124,10 +137,12 @@ function handleScrollDown(currentScrollTop) {
       title.style.animation = 'traslRightOut 1s ease';
       subtitle.style.animation = 'traslRightOut 2s ease';
       btnTalk.style.animation = 'traslRightOut 2.5s ease';
+      conImgTalk.style.animation = 'traslRightOut 3s ease';
       logo.classList.add('translated');
       title.classList.add('translatedRight');
       subtitle.classList.add('translatedRight');
       btnTalk.classList.add('translatedRight');
+      conImgTalk.classList.add('translatedRight');
       isLogoTranslated = true;
     }
   }
@@ -144,6 +159,9 @@ function handleScrollDown(currentScrollTop) {
   
 if (currentScrollTop > skilsContainer.offsetTop - window.innerHeight / 2) {
     skilTitle.style.animation = "backInLeft 1.5s ease";
+    skilBoxs.forEach(skilBox => {
+      skilBox.style.animation = "fadeIn 5s ease";
+    });
   }
 }
 function handleScrollUp() {
@@ -153,10 +171,132 @@ function handleScrollUp() {
     title.style.animation = 'traslRight 1s ease';
     subtitle.style.animation = 'traslRight 2s ease';
     btnTalk.style.animation = 'traslRight 2.5s ease';
+    conImgTalk.style.animation = 'traslRight 3s ease';
     logo.classList.remove('translated');
     title.classList.remove('translatedRight');
     subtitle.classList.remove('translatedRight');
     btnTalk.classList.remove('translatedRight');
+    conImgTalk.classList.remove('translatedRight');
     isLogoTranslated = false;
   }
 }
+
+// system image slider
+ const slider = document.getElementById('slider');
+ const cr1 = document.getElementById('r1');
+ const cr2 = document.getElementById('r2');
+ const cr3 = document.getElementById('r3');
+ const imgp1 = document.getElementById('imgp1');
+ const imgp2 = document.getElementById('imgp2');
+ const imgp3 = document.getElementById('imgp3');
+  let startX;
+  let currentIndex = 0;
+
+  slider.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  slider.addEventListener('touchmove', (e) => {
+    if (startX) {
+      const currentX = e.touches[0].clientX;
+      const diffX = startX - currentX;
+      if (diffX > 10) {
+        if (currentIndex < slider.children.length - 1) {
+          currentIndex++;
+        } else {
+          currentIndex = 0;
+        }
+          updateSlider();
+      } else if (diffX < -10) {
+        if (currentIndex > 0) {
+          currentIndex--;
+        } /*else {
+          currentIndex = slider.children.length - 1;
+        } */
+          updateSlider();
+      }
+
+      startX = null;
+    }
+  });
+function gantiSlideOtomatis() {
+      currentIndex += 1;
+      if (currentIndex >= slider.children.length) {
+        currentIndex = 0;
+      }
+          updateSlider();
+}
+setInterval(gantiSlideOtomatis, 5000);
+  function updateSlider() {
+    const translateValue = -currentIndex * 100 + '%';
+    slider.style.transform = 'translateX(' + translateValue + ')';
+    cr1.classList.remove('on');
+    cr2.classList.remove('on');
+    cr3.classList.remove('on');
+    
+    imgp1.classList.remove('opacityOn');
+    imgp2.classList.remove('opacityOn');
+    imgp3.classList.remove('opacityOn');
+
+    if (currentIndex === 0) {
+      cr1.classList.add('on');
+     imgp1.classList.add('opacityOn');
+    } else if (currentIndex === 1) {
+      cr2.classList.add('on');
+     imgp2.classList.add('opacityOn');
+    } else if (currentIndex === 2) {
+      cr3.classList.add('on');
+     imgp3.classList.add('opacityOn');
+    }
+  }
+  
+  
+  
+  // sistem form submit 
+  const form = document.querySelector('.form');
+  const popupSucces = document.querySelector('.con-popup-succes');
+  function submitForm() {
+        var formData = new FormData(document.querySelector('.form'));
+        fetch("https://sheetdb.io/api/v1/5evyv444o1ogn", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+      const btnSubmit = document.querySelector('.submit-form');
+      const inputNama = document.getElementById('nama');
+      const inputEmail = document.getElementById('email');
+      const inputSubjek = document.getElementById('subjek');
+      const inputIsiSubjek = document.getElementById('isiSubjek');
+      btnSubmit.innerHTML = '<div class="custom-loader"></div>';
+           setTimeout(function() {
+      popupSucces.style.display = "flex";
+      btnSubmit.innerHTML = 'Kirim';
+           }, 5000);
+           setTimeout(function() {
+      popupSucces.style.display = "none";
+      inputNama.value = "";
+      inputEmail.value = "";
+      inputSubjek.value = "";
+      inputIsiSubjek.value = "";
+           }, 11000);
+            console.log("Data berhasil dikirim:", data);
+        })
+        .catch(error => {
+            console.error("Terjadi kesalahan:", error);
+        });
+    }
+    
+    function cekDisabledBtn() {
+      const inputNama = document.getElementById('nama');
+      const inputEmail = document.getElementById('email');
+      const inputSubjek = document.getElementById('subjek');
+      const inputIsiSubjek = document.getElementById('isiSubjek');
+      const btnSubmit = document.querySelector('.submit-form');
+      if (inputNama.value.trim() !== '' && inputEmail.value.trim() !== '' && inputSubjek.value.trim() !== '' && inputIsiSubjek.value.trim() !== '') {
+       btnSubmit.disabled = false; 
+      } else {
+        
+       btnSubmit.disabled = true; 
+      }
+    }
