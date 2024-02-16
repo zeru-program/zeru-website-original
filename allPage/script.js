@@ -186,9 +186,11 @@ function handleScrollUp() {
  const cr1 = document.getElementById('r1');
  const cr2 = document.getElementById('r2');
  const cr3 = document.getElementById('r3');
+ const cr4 = document.getElementById('r4');
  const imgp1 = document.getElementById('imgp1');
  const imgp2 = document.getElementById('imgp2');
  const imgp3 = document.getElementById('imgp3');
+ const imgp4 = document.getElementById('imgp4');
   let startX;
   let currentIndex = 0;
 
@@ -233,10 +235,12 @@ setInterval(gantiSlideOtomatis, 5000);
     cr1.classList.remove('on');
     cr2.classList.remove('on');
     cr3.classList.remove('on');
+    cr4.classList.remove('on');
     
     imgp1.classList.remove('opacityOn');
     imgp2.classList.remove('opacityOn');
     imgp3.classList.remove('opacityOn');
+    imgp4.classList.remove('opacityOn');
 
     if (currentIndex === 0) {
       cr1.classList.add('on');
@@ -247,6 +251,9 @@ setInterval(gantiSlideOtomatis, 5000);
     } else if (currentIndex === 2) {
       cr3.classList.add('on');
      imgp3.classList.add('opacityOn');
+    } else if (currentIndex === 3) {
+      cr4.classList.add('on');
+     imgp4.classList.add('opacityOn');
     }
   }
   
