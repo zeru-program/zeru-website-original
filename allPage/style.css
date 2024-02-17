@@ -462,7 +462,6 @@ main {
 .all-project {
   display: flex;
   flex-direction: column;
-  margin-left: 2.5%;
   white-space: nowrap;
   gap: 5px;
   margin-top: 5%;
