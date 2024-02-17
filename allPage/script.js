@@ -1,3 +1,8 @@
+// cptyt 
+console.log('zeru website. created by Justine, © 2024 all rights reserved.')
+
+
+
 // navbar system
 const navClicks = document.querySelectorAll(".link-item");
 navClicks.forEach(navClick => {
@@ -132,7 +137,6 @@ function handleScrollDown(currentScrollTop) {
   // Only trigger when currentScrollTop is greater than 40% of the viewport height
   if (currentScrollTop > window.innerHeight * 0.4) {
     if (!isLogoTranslated) {
-      console.log("Scrolling down!");
       logo.style.animation = 'traslOut 1.5s ease';
       title.style.animation = 'traslRightOut 1s ease';
       subtitle.style.animation = 'traslRightOut 2s ease';
@@ -166,7 +170,6 @@ if (currentScrollTop > skilsContainer.offsetTop - window.innerHeight / 2) {
 }
 function handleScrollUp() {
   if (isLogoTranslated) {
-    console.log("Scrolling up!");
     logo.style.animation = 'trasl 1.5s ease';
     title.style.animation = 'traslRight 1s ease';
     subtitle.style.animation = 'traslRight 2s ease';
