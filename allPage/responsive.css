@@ -29,6 +29,10 @@
   .link-item {
     font-size: .7em;
     margin-right: 50%;
+    white-space: nowrap;
+  }
+  .logo-home-isi {
+    width: 100px;
   }
   #contact {
     display: flex;
@@ -78,7 +82,9 @@
     right: 0;
   }
   .link-item {
+    font-size: .8em;
     margin-right: 50%;
+    white-space: nowrap;
   }
   #contact {
     display: flex;
@@ -128,6 +134,7 @@
   }
   .link-item {
     margin-right: 50%;
+    white-space: nowrap;
   }
   #contact {
     display: flex;
@@ -197,6 +204,15 @@
 .decoration-block {
   transform: rotate(2deg);
 }
+.title-project {
+  font-size: 1.5em;
+}
+.title-project-v1 {
+  font-size: 3em;
+}
+.link-project {
+  font-size: 1.1em;
+}
 }
 
 @media screen and (min-width: 1024px) {
@@ -245,5 +261,14 @@
 }
 .decoration-block {
   transform: rotate(2deg);
+}
+.title-project {
+  font-size: 1.5em;
+}
+.title-project-v1 {
+  font-size: 3em;
+}
+.link-project {
+  font-size: 1.1em;
 }
 }

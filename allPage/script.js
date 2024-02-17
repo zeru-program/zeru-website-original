@@ -307,3 +307,9 @@ setInterval(gantiSlideOtomatis, 5000);
        btnSubmit.disabled = true; 
       }
     }
+    
+    
+    // redirect button "Let's Talk"
+    function talk() {
+      window.location.href = "#talkHref";
+    }
