@@ -458,6 +458,7 @@ main {
   width: 100%;
   overflow-x: hidden;
   margin-top: 5%;
+  gap: 3px;
 }
 .all-project {
   display: flex;
